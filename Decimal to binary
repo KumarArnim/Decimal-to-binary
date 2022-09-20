@@ -1,0 +1,17 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int a;
+    cout << "Enter the value you want to convert into binary number system" << endl;
+    cin >> a;
+    int num = 0;
+    int i = 0;
+    while(a != 0){
+        int bits = a & 1;
+        num = (bits * pow(10 , i)) + num;
+        a = a >> 1;
+        i++;
+    }
+    cout << num;
+}
